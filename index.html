@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img src="assets/react.png" alt="React logo"
+          style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
+        <h2>React JS</h2>
+
+      </section>
+      <section>
+        <h2>What is React?</h2>
+        <p>React is a JavaScript library designed for building user interfaces of web applications. Its key concepts
+          include components, virtual DOM, and JSX.</p>
+      </section>
+
+      <section>
+        <h2>Key Principles of React</h2>
+        <p>React is based on several key principles, such as declarativity, component-based architecture, and
+          universality.</p>
+      </section>
+
+      <section>
+        <h2>Declarativity in React</h2>
+        <p>Declarativity in React means that you describe what should be displayed on the screen, rather than how it
+          should be achieved.</p>
+        <pre><code>const App = () => {
+          return (
+            &lt;div&gt;
+              &lt;h1&gt;Hello, world!&lt;/h1&gt;
+            &lt;/div&gt;
+          );
+        };</code></pre>
+      </section>
+
+      <section>
+        <h2>Component-Based Architecture</h2>
+        <p>In React, everything is built on components, which are independent, reusable blocks of interface.</p>
+        <pre><code>class Welcome extends React.Component {
+  render() {
+    return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+  }
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>Algorithm and Virtual DOM</h2>
+        <p>React utilizes a virtual DOM and an efficient updating algorithm for maximum performance when updating the
+          interface.</p>
+      </section>
+
+      <section>
+        <h2>JSX in React</h2>
+        <p>JSX allows embedding any valid JavaScript expressions inside curly braces.</p>
+        <pre><code>const element = &lt;h1&gt;Hello, World!&lt;/h1&gt;;</code></pre>
+      </section>
+
+      <section>
+        <h2>Attributes in JSX</h2>
+        <p>To use a string literal as an attribute value, quotes are used.</p>
+        <p>If a JavaScript expression is needed in the attribute value, curly braces are used:</p>
+        <pre><code>// String literal as attribute value
+const element1 = &lt;img src="react-logo.png" alt="React Logo" /&gt;;
+
+// JavaScript expression in attribute value
+const imageUrl = 'react-logo.png';
+const element2 = &lt;img src={imageUrl} alt="React Logo" /&gt;;</code></pre>
+      </section>
+
+      <section>
+        <h2>Security and Babel Compilation</h2>
+        <p>User-entered data can be safely used in JSX, as it prevents code injection attacks.</p>
+        <p>Babel compiles JSX into React.createElement() calls, creating React elements.</p>
+      </section>
+
+
+      <section>
+        <h3>Using JSX in if Statements and for Loops</h3>
+        <p>JSX can be used inside if statements and for loops, as well as assigned to variables and passed as arguments
+          to functions.</p>
+
+        <pre><code>{/* JSX в инструкции if */}
+          if (isLoggedIn) {
+            greeting = &lt;Welcome name="User" /&gt;;
+          } else {
+            greeting = &lt;LoginPrompt /&gt;;
+          }
+      
+          {/* JSX в цикле for */}
+          const listItems = [];
+          for (let i = 0; i &lt; items.length; i++) {
+            listItems.push(&lt;li key={i}&gt;{items[i]}&lt;/li&gt;);
+          }
+      </code></pre>
+      </section>
+
+      <section>
+        <pre><code>
+          {/* Assigning JSX to a variable */}
+          const element = <div>Hello, World!</div>;
+          
+          {/* Passing JSX as a function argument */}
+          function renderElement(element) {
+            return <div>{element}</div>;
+          }
+          
+          {/* Returning JSX from a function */}
+          function getGreeting(name) {
+            return <h1>Hello, {name}!</h1>;
+          }
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Advantages of Using React</h2>
+        <p>React offers several advantages over other approaches to interface development, such as ease of use, high
+          performance, and a wide range of ecosystem capabilities.</p>
+      </section>
+
+      <section>
+        <h2>Questions and Answers</h2>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
