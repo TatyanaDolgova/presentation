@@ -5,9 +5,9 @@
 }
 
 body {
+  background-color: rgb(1, 22, 39);
   width: 95%;
   height: 95%;
-  background: linear-gradient(rgb(188, 246, 255), rgb(149, 205, 255));
 }
 
 .single-item img {
