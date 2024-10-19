@@ -1,0 +1,10 @@
+  .gerg {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(2, 141, 64);
+    border: none;
+  }
+
+  .gerg:hover {
+    color: rgb(8, 0, 255);
+  }
