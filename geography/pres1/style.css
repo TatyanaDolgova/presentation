@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 95%;
+  height: 95%;
+  background-color: black;
+}
+
+.single-item img {
+  height: 90%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.slick-prev {
+  left: 30px;
+}
